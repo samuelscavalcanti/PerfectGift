@@ -1,76 +1,76 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
+/* Mobile-first base styles */
+:root{
+  --purple:#6d5dfc;
+  --accent:#ff5fb0;
+  --muted:#f4f4f7;
+  --card:#ffffff;
+  --text:#223;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:var(--text);background:var(--muted);line-height:1.4}
+
+/* header (mobile-first) — restored non-Bootstrap look with toggle */
+.top-header{background:var(--purple);color:white;padding:14px 12px}
+.top-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;gap:12px}
+.logo{font-size:1.1rem;margin:0}
+.nav-toggle{background:transparent;border:0;color:white;font-size:1.2rem;padding:8px;margin-left:auto}
+.main-nav{display:none;gap:10px;flex-wrap:wrap}
+.main-nav a{color:white;text-decoration:none;padding:6px 8px;border-radius:6px;font-weight:600;font-size:0.95rem}
+.main-nav a:hover{background:rgba(255,255,255,0.08)}
+.hide-mobile{display:none}
+
+/* container / layout */
+.container{max-width:var(--max-width);margin:18px auto;padding:0 12px}
+.hero{padding:18px 0;text-align:center}
+.hero h2{margin:0 0 8px;font-size:1.25rem}
+.hero p{margin:0;color:#404158}
+
+.suggester{margin-top:16px}
+form{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(34,34,34,0.06)}
+label{display:block;margin:8px 0 6px;font-size:0.9rem}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e7e7ee;background:transparent}
+textarea{resize:vertical}
+.checkbox-row{display:flex;gap:8px;flex-wrap:wrap}
+.checkbox-row label{display:flex;gap:6px;align-items:center;background:#fff;padding:6px 8px;border-radius:8px;border:1px solid #eee;font-size:0.875rem}
+
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* utility for result styling (keeps custom subtle look alongside Bootstrap) */
+.result-cta .btn-primary{background:var(--purple);border-color:var(--purple)}
+.result-cta .btn-outline-secondary{border-color:#ddd}
+
+.results{margin-top:14px}
+.result-card{background:var(--card);padding:12px;border-radius:10px;margin-bottom:8px;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+.result-card h3{margin:0 0 6px}
+.result-meta{font-size:0.9rem;color:#666;margin-bottom:8px}
+
+/* products grid */
+.produtos-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.produto-card{background:var(--card);padding:12px;border-radius:10px}
+.produto-card p{margin:8px 0}
+
+/* contato */
+.contact-form input, .contact-form textarea{background:transparent}
+
+/* footer */
+.rodape{background:transparent;padding:18px 12px}
+.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.footer-links a{color:#444;text-decoration:none;margin-left:10px;font-weight:600}
+
+/* Desktop styles */
+@media(min-width:800px){
+  .main-nav{display:flex;margin-left:auto}
+  .nav-toggle{display:none}
+  .hide-mobile{display:inline-block}
+  .produtos-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h2{font-size:1.6rem}
 }
 
-.top-header {
-    background: #6d5dfc;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
+/* show navigation when header has .open on small screens */
+.top-header.open .main-nav{display:flex;flex-direction:column;padding:8px 0}
 
-.top-header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
 
-.home {
-    text-align: center;
-    padding: 40px;
-}
-
-.box {
-    margin-top: 20px;
-    background: white;
-    padding: 20px;
-    display: inline-block;
-}
-
-.btn-roxo {
-    background: #6d5dfc;
-    color: white;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.btn-pequeno {
-    padding: 6px 10px;
-}
-
-.conteudo {
-    padding: 30px;
-}
-
-.produto {
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
-}
-
-.btn-rosa {
-    background: #ff5fb0;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 6px;
-    color: white;
-}
-
-.rodape {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background: #ddd;
+@media(min-width:1100px){
+  .produtos-grid{grid-template-columns:repeat(3,1fr)}
 }
