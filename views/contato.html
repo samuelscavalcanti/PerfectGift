@@ -4,7 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PLACEHOLDER" crossorigin="anonymous">
-  <link rel="stylesheet" href="../public/css/style.css">
+  
+  <style>
+    /* Estilo moderno e sutil */
+    body {
+        /* Fundo muito claro, quase branco */
+        background-color: #f8f9fa; 
+        font-family: 'Inter', sans-serif; /* Fonte limpa e legível */
+    }
+    .hero-section {
+        /* Fundo suave com cor secundária e padding generoso */
+        background-color: #e9f7ff; 
+        color: #333;
+        padding: 4rem 1rem; 
+        margin-bottom: 3rem;
+    }
+    .hero-section h1 {
+        /* Texto limpo, sem sombras exageradas */
+        font-weight: 300; 
+    }
+    .form-card {
+        /* Card com leve sombra e borda arredondada */
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: none;
+    }
+  </style>
+
   <title>PerfectGift - Contato</title>
 </head>
 <body>
@@ -12,33 +38,49 @@
   <div class="d-flex flex-column min-vh-100">
     <div id="header"></div>
 
-    <main class="container flex-fill py-4">
-      <section class="conteudo contato">
-      <h2>Fale com a gente</h2>
-
-      <p>Tem alguma dúvida, sugestão ou quer colaborar com o projeto? Envie uma mensagem — este formulário é apenas demonstrativo (não envia de fato).</p>
-
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem recebida (simulação). Obrigado!'); this.reset();">
-        <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input id="nome" name="nome" class="form-control" required>
+    <main class="flex-fill">
+      
+      <section class="hero-section text-center">
+        <div class="container"> <h1 class="display-5 mb-3">Fale Conosco</h1>
+            <p class="lead text-muted">Dúvidas, sugestões ou interesse em parcerias? Envie sua mensagem.</p>
         </div>
+      </section>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input id="email" name="email" type="email" class="form-control" required>
-        </div>
+      <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 col-xl-6"> 
+              
+              <div class="card p-4 p-md-5 bg-white form-card">
+                
+                <h2 class="h4 fw-bold text-center mb-4 text-primary">Envie sua Mensagem</h2>
 
-        <div class="mb-3">
-          <label for="mensagem" class="form-label">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" class="form-control" required></textarea>
-        </div>
+                <p class="text-muted mb-4">Tem alguma dúvida, sugestão ou quer colaborar com o projeto? Envie uma mensagem — este formulário é apenas demonstrativo (não envia de fato).</p>
 
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </div>
-      </form>
-    </section>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem recebida (simulação). Obrigado!'); this.reset();">
+                  
+                  <div class="mb-3">
+                    <label for="nome" class="form-label fw-semibold">Nome</label>
+                    <input id="nome" name="nome" class="form-control" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label fw-semibold">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" class="form-control" required></textarea>
+                  </div>
+
+                  <div class="form-actions pt-3 d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Enviar Mensagem</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
     </main>
 
     <div id="footer"></div>
