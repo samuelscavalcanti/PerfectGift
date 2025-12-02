@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>LinkBoost - Início</title>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="home">
+    <h2>Indique um produto. Ganhe comissão.</h2>
+    <p>Simulador de funcionamento:</p>
+
+    <button onclick="gerarLinkInicial()" class="btn-roxo">
+        Gerar meu link exclusivo
+    </button>
+
+    <div id="linkBox" class="box" style="display:none;">
+        <p>Seu link gerado:</p>
+        <input id="linkGerado" readonly />
+        <button onclick="copiarLink()" class="btn-pequeno">Copiar</button>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="../public/js/app.js"></script>
+</body>
+</html>

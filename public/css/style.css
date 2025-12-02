@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.top-header {
+    background: #6d5dfc;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.home {
+    text-align: center;
+    padding: 40px;
+}
+
+.box {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    display: inline-block;
+}
+
+.btn-roxo {
+    background: #6d5dfc;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-pequeno {
+    padding: 6px 10px;
+}
+
+.conteudo {
+    padding: 30px;
+}
+
+.produto {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.btn-rosa {
+    background: #ff5fb0;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #ddd;
+}
