@@ -53,12 +53,24 @@ Siga os passos abaixo para ter uma cópia do projeto rodando na sua máquina.
 
 ## 📂 Estrutura do Projeto
 
-A estrutura do projeto segue um padrão modular para organização de código:
-PerfectGift/
-├── components/        # Componentes reutilizáveis da UI
-├── public/            # Arquivos estáticos (imagens, fontes, etc.)
-├── views/             # Páginas principais da aplicação
-└── index.html         # Ponto de entrada (se aplicável)
+- **PERFECTGIFT/** (Raiz do Projeto)
+  - **components/**  
+    - `footer.html` — Componente de rodapé reutilizável.  
+    - `header.html` — Componente de cabeçalho reutilizável.
+  
+  - **public/**  
+    - **css/**  
+      - `style.css` — Estilos gerais da aplicação.  
+    - **js/**  
+      *(pasta reservada para scripts JavaScript da aplicação)*
+
+  - **views/**  
+    - `contato.html` — Página de contato com o usuário.  
+    - `index.html` — Página inicial principal.  
+    - `perfil.html` — Página de perfil ou informações do usuário.  
+    - `produtos.html` — Página listando produtos disponíveis.  
+    - `sobre.html` — Página “Sobre nós”, com informações da aplicação.  
+
 ---
 
 ## 🤝 Contribuição
