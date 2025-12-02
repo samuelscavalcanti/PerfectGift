@@ -8,7 +8,6 @@ window.onload = () => {
         .then(res => res.text())
         .then(data => document.getElementById("footer").innerHTML = data);
 };
-// PRODUCT CATALOG (simulated)
 const productCatalog = [
     { id: 'noise-x', title: 'Fone Bluetooth Noise-X', desc: 'Som nítido e cancelamento básico — ótimo para quem curte tecnologia.', tags: ['tech'], ages: ['18-25','26-35','36-50'], budgets: ['75-200','200plus'], occasions:['birthday','holiday','just-because'], link: 'https://store.example.com/product/noise-x' },
     { id: 'homegrow', title: 'Kit de Jardinagem HomeGrow', desc: 'Perfeito para amantes de plantas e decoração de casa.', tags:['home'], ages:['26-35','36-50','50+'], budgets:['25-75','75-200'], occasions:['birthday','holiday','just-because'], link: 'https://store.example.com/product/homegrow' },
@@ -17,16 +16,11 @@ const productCatalog = [
     { id: 'smartwatch-mini', title: 'Relógio Smart Mini', desc: 'Relógio simples com funções de saúde — ótimo presente tecnológico.', tags:['tech','sport'], ages:['18-25','26-35','36-50'], budgets:['75-200','200plus'], occasions:['birthday','holiday','just-because'], link: 'https://store.example.com/product/smartwatch-mini' }
 ];
 
-// Small helper: score candidates
 function scoreProduct(prod, criteria){
     let score = 0;
-    // budget match (higher priority)
     if(prod.budgets.includes(criteria.budget)) score += 3;
-    // tag overlap
     for(const t of criteria.interests){ if(prod.tags.includes(t)) score += 2; }
-    // occasion
     if(prod.occasions.includes(criteria.occasion)) score += 1;
-    // age support
     if(prod.ages.includes(criteria.age)) score += 1;
     return score;
 }
@@ -36,7 +30,6 @@ function findRecommendations(criteria, topN=3){
         .filter(x=>x.score>0)
         .sort((a,b)=>b.score-a.score);
 
-    // if we found none, fallback to any affordable items by budget
     if(candidates.length===0){
         return productCatalog.filter(p=>p.budgets.includes(criteria.budget)).slice(0,topN);
     }
@@ -63,7 +56,6 @@ function copyToClipboard(text){
         return;
     }
 
-    // fallback for older browsers — temporary textarea
     const tmp = document.createElement('textarea');
     tmp.value = text;
     document.body.appendChild(tmp);
@@ -72,7 +64,6 @@ function copyToClipboard(text){
     tmp.remove();
 }
 
-// Form handling for the gift suggester
 document.addEventListener('DOMContentLoaded', ()=>{
     const form = document.getElementById('sugForm');
     if(form){
@@ -99,10 +90,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
-        // nothing else here — header toggle will be initialized after header loads
 });
 
-// Initialize the header toggle after the header component is injected
 function initHeaderToggle(){
     const navToggle = document.querySelector('.nav-toggle');
     if(navToggle){

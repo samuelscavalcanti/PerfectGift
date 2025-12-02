@@ -10,7 +10,7 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:var(--text);background:var(--muted);line-height:1.4}
 
-/* header (mobile-first) — restored non-Bootstrap look with toggle */
+/* header (mobile-first)*/
 .top-header{background:var(--purple);color:white;padding:14px 12px}
 .top-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;gap:12px}
 .logo{font-size:1.3rem;margin:0;font-family:'Inter',sans-serif;font-weight:700;letter-spacing:-0.5px}
@@ -36,7 +36,6 @@ textarea{resize:vertical}
 
 .form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
 
-/* utility for result styling (keeps custom subtle look alongside Bootstrap) */
 .result-cta .btn-primary{background:var(--purple);border-color:var(--purple)}
 .result-cta .btn-outline-secondary{border-color:#ddd}
 
@@ -68,7 +67,6 @@ textarea{resize:vertical}
   .logo{font-size:1.5rem}
 }
 
-/* show navigation when header has .open on small screens */
 .top-header.open .main-nav{display:flex;flex-direction:column;padding:8px 0}
 
 
